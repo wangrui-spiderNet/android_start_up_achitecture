@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.cicada.startup.MyApplication;
 import com.cicada.startup.R;
+import com.cicada.startup.common.ui.activity.BaseActivity;
 import com.cicada.startup.data.Injection;
 import com.cicada.startup.data.remote.model.ZhihuStoryDetail;
 import com.cicada.startup.ui.listener.AppBarStateChangeListener;
@@ -109,7 +110,6 @@ public class ZhihuActivity extends BaseActivity {
         final MarqueeText marqueeText = (MarqueeText)findViewById(R.id.toolbar_title);
         AppBarLayout appBarLayout = (AppBarLayout)findViewById(R.id.app_bar_layout);
         final Toolbar toolbar = (Toolbar)findViewById(R.id.tb_zhihu);
-        initToolbar(toolbar, true, mZhihuTitle);
         marqueeText.setText(mZhihuTitle);
         toolbarLayout.setTitle(mZhihuTitle);
         appBarLayout.addOnOffsetChangedListener(new AppBarStateChangeListener() {

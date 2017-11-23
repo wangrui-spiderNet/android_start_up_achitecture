@@ -24,8 +24,7 @@
         </activity>
         <activity android:name="com.cicada.startup.ui.activity.ZhihuActivity">
         </activity>
-        <activity android:name="com.cicada.startup.about.AboutActivity">
-        </activity>
+
     </application>
 
 </manifest>

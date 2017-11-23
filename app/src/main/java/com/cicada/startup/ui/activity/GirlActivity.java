@@ -16,6 +16,7 @@ import android.view.animation.DecelerateInterpolator;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.cicada.startup.R;
+import com.cicada.startup.common.ui.activity.BaseActivity;
 import com.cicada.startup.utils.Consts;
 import com.cicada.startup.utils.Util;
 
@@ -91,8 +92,6 @@ public class GirlActivity extends BaseActivity {
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 .into(photoView);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        initToolbar(mToolbar, true, R.string.girl_title);
 
         mRLGirlRoot = findViewById(R.id.rl_girl_root);
         mStatusBar = findViewById(R.id.fake_status_bar);

@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.cicada.startup.R;
+import com.cicada.startup.common.ui.activity.BaseActivity;
 import com.cicada.startup.ui.fragment.GirlListFragment;
 import com.cicada.startup.ui.fragment.ZhihuListFragment;
 
@@ -48,8 +49,6 @@ public class MainActivity extends BaseActivity {
                 .addItem(new BottomNavigationItem(R.drawable.ic_grade, "Zhihu"))
                 .initialise();
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        initToolbar(toolbar, false, R.string.app_name);
     }
 
     private class MainOnTabSelectedListener implements BottomNavigationBar.OnTabSelectedListener {
