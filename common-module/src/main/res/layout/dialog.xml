@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/match_wrap"
+              android:layout_marginLeft="20dp"
+              android:layout_marginRight="20dp"
+              android:background="@drawable/background_dialog"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        style="@style/match_wrap"
+        android:gravity="center_horizontal"
+        android:paddingTop="15dp"
+        android:text="@string/dialog_title_tip"
+        android:textColor="@color/text_color_black"
+        android:textSize="@dimen/text_size_medium"/>
+
+    <LinearLayout
+        style="@style/match_wrap"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBarShow"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="1"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/text_dialog_tipText"
+            style="@style/match_wrap"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/text_size_medium"/>
+    </LinearLayout>
+
+    <include layout="@layout/activity_line_horizontal"/>
+
+    <LinearLayout
+        style="@style/match_wrap"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_cancel"
+            style="@style/match_wrap"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_button_dialog_left"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/cancel"
+            android:textColor="@color/text_color_common_gray"
+            android:textSize="@dimen/text_size_small"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="@dimen/divider_size"
+            android:layout_height="match_parent"
+            android:background="@color/divider_gray"
+            android:visibility="gone">
+        </View>
+
+        <Button
+            android:id="@+id/dialog_ok"
+            style="@style/match_wrap"
+            android:layout_weight="1.0"
+            android:background="@drawable/selector_button_dialog_right"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/yes"
+            android:textColor="@color/text_color_green1"
+            android:textSize="@dimen/text_size_small"/>
+    </LinearLayout>
+
+</LinearLayout>

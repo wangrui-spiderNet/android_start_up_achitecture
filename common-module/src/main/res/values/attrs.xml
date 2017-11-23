@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ProgressWheel">
+        <attr name="text" format="string"/>
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="barColor" format="color"/>
+        <attr name="rimColor" format="color"/>
+        <attr name="rimWidth" format="dimension"/>
+        <attr name="spinSpeed" format="dimension"/>
+        <attr name="delayMillis" format="integer"/>
+        <attr name="circleColor" format="color"/>
+        <attr name="radius" format="dimension"/>
+        <attr name="progressBarWidth" format="dimension"/>
+        <attr name="progressBarLength" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="slidingBlock" format="reference|color"/>
+        <attr name="slidingBlockHeight" format="dimension"/>
+        <attr name="allowWidthFull" format="boolean"/>
+        <attr name="disableViewPager" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="CirclePagerIndicator">
+        <attr name="circle_indicator_centerHorizontal" format="boolean"/>
+        <attr name="circle_indicator_follow" format="boolean"/>
+        <attr name="circle_indicator_orientation" format="reference"/>
+        <attr name="circle_indicator_color" format="color"/>
+        <attr name="circle_indicator_stroke_color" format="color"/>
+        <attr name="circle_indicator_stroke_width" format="dimension"/>
+        <attr name="circle_indicator_fill_color" format="color"/>
+        <attr name="circle_indicator_radius" format="dimension"/>
+        <attr name="circle_indicator_space" format="dimension"/>
+        <attr name="circle_indicator_indicator_radius" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="ShapedImageView">
+        <attr name="shape_mode" format="enum">
+            <enum name="round_rect" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+        <attr name="round_radius" format="dimension" />
+        <attr name="round_bottomLeftRadius" format="dimension"/>
+        <attr name="round_bottomRightRadius" format="dimension"/>
+        <attr name="stroke_width" format="dimension" />
+        <attr name="stroke_color" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="kswThumbDrawable" format="reference"/>
+        <attr name="kswThumbColor" format="color|reference"/>
+        <attr name="kswThumbMargin" format="dimension|reference"/>
+        <attr name="kswThumbMarginTop" format="dimension|reference"/>
+        <attr name="kswThumbMarginBottom" format="dimension|reference"/>
+        <attr name="kswThumbMarginLeft" format="dimension|reference"/>
+        <attr name="kswThumbMarginRight" format="dimension|reference"/>
+        <attr name="kswThumbWidth" format="dimension|reference"/>
+        <attr name="kswThumbHeight" format="dimension|reference"/>
+        <attr name="kswThumbRadius" format="dimension|reference"/>
+        <attr name="kswBackRadius" format="dimension|reference"/>
+        <attr name="kswBackDrawable" format="reference"/>
+        <attr name="kswBackColor" format="color|reference"/>
+        <attr name="kswFadeBack" format="boolean"/>
+        <attr name="kswBackMeasureRatio" format="float"/>
+        <attr name="kswAnimationDuration" format="integer"/>
+        <attr name="kswTintColor" format="color|reference"/>
+        <attr name="kswTextOn" format="string"/>
+        <attr name="kswTextOff" format="string"/>
+        <attr name="kswTextMarginH" format="dimension"/>
+        <attr name="kswAutoAdjustTextPosition" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleView">
+        <attr name="outCircleWidth" format="dimension|reference" />
+        <attr name="outCircleColor" format="color|reference" />
+        <attr name="innerCircleColor" format="color|reference" />
+        <attr name="sectorColor" format="color|reference" />
+        <attr name="defaultRes" format="reference"/>
+        <attr name="isTextShow" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="RangeSeekBar">
+        <attr name="absoluteMinValue" format="integer|float" />
+        <attr name="absoluteMaxValue" format="integer|float" />
+        <attr name="singleThumb" format="boolean" />
+    </declare-styleable>
+
+</resources>

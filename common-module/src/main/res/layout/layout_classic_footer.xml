@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cicada.startup.common.ui.view.swipetoloadlayout.LoadMoreFooterView xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/loadMoreFooter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/progressbar"
+                    style="?android:attr/progressBarStyleSmallInverse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp" />
+
+                <ImageView
+                    android:id="@+id/ivSuccess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:padding="15dp"
+                    android:background="@drawable/qq_refresh_success" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvLoadMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/pulltoloadmore"
+                android:textColor="#999999" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.cicada.startup.common.ui.view.swipetoloadlayout.LoadMoreFooterView>

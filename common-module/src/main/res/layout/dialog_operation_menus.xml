@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout style="@style/match_wrap"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_marginLeft="20dp"
+              android:layout_marginRight="20dp"
+              android:background="@drawable/background_dialog"
+              android:orientation="vertical"
+              android:paddingBottom="5dp"
+              android:paddingTop="5dp">
+
+    <TextView
+        android:id="@+id/textViewSave"
+        style="@style/match_wrap"
+        android:background="@drawable/selector_item_public"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/save_to_local"
+        android:textColor="@color/text_color_black"
+        android:textSize="@dimen/text_size_small"/>
+
+    <View
+        android:id="@+id/viewSaveLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:background="@color/divider_gray"/>
+
+    <TextView
+        android:id="@+id/textViewCopy"
+        style="@style/match_wrap"
+        android:background="@drawable/selector_item_public"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/copy"
+        android:textColor="@color/text_color_black"
+        android:textSize="@dimen/text_size_small"/>
+
+    <View
+        android:id="@+id/viewCopyLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:background="@color/divider_gray"/>
+
+    <TextView
+        android:id="@+id/textViewDelete"
+        style="@style/match_wrap"
+        android:background="@drawable/selector_item_public"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/delete"
+        android:textColor="@color/text_color_black"
+        android:textSize="@dimen/text_size_small"/>
+
+    <View
+        android:id="@+id/viewDeleteLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:background="@color/divider_gray"/>
+
+    <TextView
+        android:id="@+id/textViewEdit"
+        style="@style/match_wrap"
+        android:background="@drawable/selector_item_public"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/edit"
+        android:textColor="@color/text_color_black"
+        android:textSize="@dimen/text_size_small"/>
+
+    <View
+        android:id="@+id/viewEditLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:background="@color/divider_gray"/>
+
+    <TextView
+        android:id="@+id/textViewForwarding"
+        style="@style/match_wrap"
+        android:background="@drawable/selector_item_public"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/transmit"
+        android:textColor="@color/text_color_black"
+        android:textSize="@dimen/text_size_small"/>
+
+    <View
+        android:id="@+id/viewForwardingLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:background="@color/divider_gray"/>
+
+    <View
+        android:id="@+id/viewCustomMenuLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_size"
+        android:background="@color/divider_gray"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textViewCustomMenu"
+        style="@style/match_wrap"
+        android:background="@drawable/selector_item_public"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textColor="@color/text_color_black"
+        android:textSize="@dimen/text_size_small"
+        android:visibility="gone"/>
+
+</LinearLayout>

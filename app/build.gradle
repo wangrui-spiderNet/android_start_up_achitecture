@@ -1,0 +1,186 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    //正式环境
+    def API_RELEASE_HOST = '"http://imzhiliao.com:9000/"'
+    //开发环境
+    def API_DEV_HOST = '"http://dev.imzhiliao.com/"'
+    //测试环境
+    def API_TEST_HOST = '"http://test.imzhiliao.com/"'
+
+    def app=rootProject.ext.android
+    compileSdkVersion app.compileSdkVersion
+    buildToolsVersion app.buildToolsVersion
+    defaultConfig {
+        applicationId app.applicationId
+        minSdkVersion app.minSdkVersion
+        targetSdkVersion app.targetSdkVersion
+        versionCode app.versionCode
+        versionName app.versionName
+
+        //multiDex分包加载
+        multiDexEnabled true
+        resConfigs "zh"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    //签名
+    signingConfigs {
+        myConfig {
+            storeFile file("../key/pos_key.jks");
+            storePassword "cicada2017"
+            keyAlias "cicada"
+            keyPassword "cicada2017"
+        }
+    }
+
+    buildTypes {
+
+        //没有做数字签名
+        debug {
+            buildConfigField('boolean', 'PRINT_LOG', 'true')
+            buildConfigField('String', 'API_HOST', "${API_DEV_HOST}")
+            minifyEnabled false
+            // 混淆文件的位置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //debug
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null &&
+                            outputFile.name.endsWith('debug.apk')) {
+                        def fileName =
+                                "cicada_pos_debug_${defaultConfig.versionName}_${compileTime()}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+
+        dev {
+            buildConfigField('boolean', 'PRINT_LOG', 'true')
+            buildConfigField('String', 'API_HOST', "${API_DEV_HOST}")
+            signingConfig signingConfigs.myConfig
+            minifyEnabled false
+            // 混淆文件的位置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //debug
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null &&
+                            outputFile.name.endsWith('dev.apk'))  {
+                        def fileName =
+                                "cicada_pos_dev_${defaultConfig.versionName}_${compileTime()}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+
+        qa {
+            buildConfigField('boolean', 'PRINT_LOG', 'true')
+            buildConfigField('String', 'API_HOST', "${API_TEST_HOST}")
+            signingConfig signingConfigs.myConfig
+            minifyEnabled false
+            // 混淆文件的位置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //apk重命名
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null &&
+                            outputFile.name.endsWith('qa.apk'))  {
+                        def fileName =
+                                "cicada_pos_qa_${defaultConfig.versionName}_${compileTime()}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+
+        release {
+            buildConfigField('boolean', 'PRINT_LOG', 'false')
+            buildConfigField('String', 'API_HOST', "${API_RELEASE_HOST}")
+
+            signingConfig signingConfigs.myConfig
+            //
+            minifyEnabled false
+            // 混淆文件的位置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //release版本apk重命名
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null &&
+                            outputFile.name.endsWith('release.apk')) {
+                        def fileName =
+                                "cicada_pos_release_${defaultConfig.versionName}_${compileTime()}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+
+    }
+
+    productFlavors{
+        //正式环境
+        official {
+            manifestPlaceholders = [APP_ENV       : "release",
+                                    CHANNEL_NAME  : "official",
+                                    TALKINGDATA_ID: "F169ABC85EF74D73B5A763392FB5539F"]
+        }
+
+        //开发环境
+        nofficial {
+            manifestPlaceholders = [APP_ENV       : "dev",
+                                    CHANNEL_NAME  : "nofficial",
+                                    TALKINGDATA_ID: "4C50A07C47AD462E84C60BD92BF1C521"]
+        }
+
+    }
+
+}
+
+def compileTime() {
+    return new Date().format("yyyy_MM_dd", java.util.TimeZone.getTimeZone("GMT+8"))
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+//    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+//    compile 'com.android.support:support-v4:26.1.0'
+//    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.google.guava:guava:18.0'
+//    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'android.arch.lifecycle:runtime:1.0.3'
+    compile 'android.arch.lifecycle:extensions:1.0.0'
+    compile 'android.arch.persistence.room:runtime:1.0.0'
+//    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+//    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.facebook.stetho:stetho:1.3.1'
+    compile 'com.github.chrisbanes:PhotoView:1.3.0'
+    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'android.arch.lifecycle:compiler:1.0.0'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.0.0'
+
+    compile project(':common-module')
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '26.1.0'
+            }
+        }
+    }
+}

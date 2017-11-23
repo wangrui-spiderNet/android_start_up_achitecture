@@ -1,0 +1,91 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    def app = rootProject.ext.android
+    compileSdkVersion app.compileSdkVersion
+    buildToolsVersion app.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion app.minSdkVersion
+        targetSdkVersion app.targetSdkVersion
+        versionCode app.versionCode
+        versionName app.versionName
+        resConfigs "zh"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+buildscript {
+
+    repositories {
+        jcenter()
+    }
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        def verCfg = rootProject.ext.dependencies
+        //
+        classpath "com.jakewharton:butterknife-gradle-plugin:$verCfg.butterknifeVersion"
+    }
+}
+
+dependencies {
+    def verCfg = rootProject.ext.dependencies
+    //
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //fastjson
+    compile "com.alibaba:fastjson:$verCfg.fastJsonVersion"
+    //rxjava
+    compile "io.reactivex:rxjava:$verCfg.rxjavaVersion"
+    //rxandroid
+    compile "io.reactivex:rxandroid:$verCfg.rxAndroidVersion"
+    //retrofit2
+    compile "com.squareup.retrofit2:retrofit:$verCfg.retrofitVersion"
+    //
+    compile "com.squareup.retrofit2:converter-gson:$verCfg.retrofitConverterGsonVersion"
+    //
+    compile "com.squareup.retrofit2:adapter-rxjava:$verCfg.retrofitAdapterRxJavaVersion"
+    //
+    compile "com.squareup.okhttp3:logging-interceptor:$verCfg.okhttp3Version"
+    //
+    compile "com.squareup.okhttp3:okhttp:$verCfg.okhttp3Version"
+    //glide
+    compile "com.github.bumptech.glide:glide:$verCfg.glideVersion"
+    //
+    compile "com.android.support:appcompat-v7:$verCfg.supportAppcompatVersion"
+    //
+    compile "com.android.support:support-v4:$verCfg.supportV4Version"
+    //
+    compile "com.android.support:recyclerview-v7:$verCfg.recyclerviewV7Version"
+    //support design
+    compile "com.android.support:design:$verCfg.supportDesignVersion"
+    //eventbus
+    compile "org.greenrobot:eventbus:$verCfg.eventbusVesion"
+    //butterknife
+    compile "com.jakewharton:butterknife:$verCfg.butterknifeVersion"
+    //
+    apt "com.jakewharton:butterknife-compiler:$verCfg.butterknifeVersion"
+    //SwipeToLoadLayout
+    compile "com.github.Aspsine:SwipeToLoadLayout:$verCfg.swipeToLoadLayoutVersion"
+    //
+    compile "com.android.support:multidex:$verCfg.multidexVersion"
+    //七牛
+    compile "com.qiniu:qiniu-android-sdk:$verCfg.qiniuVersion"
+    //easypermission权限检查
+    compile "pub.devrel:easypermissions:$verCfg.easyPermissionVersion"
+    testCompile 'junit:junit:4.12'
+}

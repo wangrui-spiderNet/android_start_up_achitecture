@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="toolbar_title_color">#4A4A4A</color>
+    <color name="toolbar_title_color_red">#ff5043</color>
+
+    <!--透明色值-->
+    <color name="transparent">#00000000</color> <!-- 透明 -->
+    <color name="transparent_half_black">#7f000000</color> <!-- 黑半透明 -->
+    <color name="transparent_gray">#28000000</color> <!-- 黑半透明 -->
+
+    <color name="background_color_white">#ffffffff</color>
+    <color name="background_color">#F5F5F5</color>
+
+    <color name="wheelview_color_black">#2e3138</color>
+    <color name="wheelview_color_gray">#aaafb8</color>
+
+    <color name="divider_gray">#e2e5e7</color>
+    <color name="text_color_common">#6B6B6B</color>
+    <color name="text_color_common_black">#4A4A4A</color>
+    <color name="text_color_common_gray">#B3BBCB</color>
+
+    <color name="colorPrimary">#F5F5F5</color>
+    <color name="colorPrimaryDark">#ffffffff</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!-- 下拉刷新时，颜色值 -->
+    <color name="swipe_refresh_color1">#ff00ddff</color>
+    <color name="swipe_refresh_color2">#ffffbb33</color>
+    <color name="swipe_refresh_color3">#ffff4444</color>
+    <color name="swipe_refresh_color4">#ffaa66cc</color>
+
+    <!--文本颜色-->
+    <color name="text_color_white">#ffffff</color>
+    <color name="text_color_white1">#FFE9E4</color>
+    <color name="text_color_white_down">#c6cbce</color>
+    <color name="text_color_black">#2e3138</color>
+    <color name="text_color_gray">#aeaeae</color>
+    <color name="text_color_blue">#415f9c</color>
+    <color name="text_color_yellow">#ff6d53</color>
+    <color name="text_color_green">#29bfae</color>
+    <color name="text_color_green1">#7ED321</color>
+    <color name="text_color_red">#FF6D53</color>
+    <color name="text_color_hint">#c6cbce</color>
+    <color name="text_color_orange">#fe8500</color>
+
+    <color name="dialog_bg">#99000000</color>
+    <color name="circle_indicator_fill_color">#ff5043</color>
+
+    <color name="percentview_default">#A1FBF8</color>
+    <color name="percentview_arc">#2FD7D2</color>
+</resources>

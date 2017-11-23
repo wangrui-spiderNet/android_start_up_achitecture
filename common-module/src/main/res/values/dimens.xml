@@ -1,0 +1,35 @@
+<resources>
+
+
+    <dimen name="toolbar_height">48.0dp</dimen>
+
+    <!-- content size -->
+    <dimen name="text_size_smallest8sp">8sp</dimen>
+    <dimen name="text_size_smallest9sp">9sp</dimen>
+    <dimen name="text_size_smallest10sp">10sp</dimen>
+    <dimen name="text_size_smallest11sp">11sp</dimen>
+    <dimen name="text_size_smallest12sp">12sp</dimen>
+    <dimen name="text_size_smallest">13sp</dimen>
+    <dimen name="text_size_smaller">14sp</dimen>
+    <dimen name="text_size_15sp">15sp</dimen>
+    <dimen name="text_size_small">16sp</dimen>
+    <dimen name="text_size_17sp">17sp</dimen>
+    <!-- 不设置时候的正常尺寸 -->
+    <dimen name="text_size_normal">18sp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+    <dimen name="text_size_larger">24sp</dimen>
+    <dimen name="text_size_30sp">30sp</dimen>
+    <dimen name="text_size_60sp">60sp</dimen>
+    <dimen name="text_size_35sp">35sp</dimen>
+    <dimen name="text_size_72sp">72sp</dimen>
+    <!--  -->
+    <dimen name="remindWheelViewSizeTime">20sp</dimen>
+    <dimen name="remindWheelViewSizeDate">20sp</dimen>
+
+    <dimen name="divider_size">0.5dp</dimen>
+
+    <dimen name="point_group_height">40dp</dimen>
+    <dimen name="bottom_btn_height">60dp</dimen>
+
+</resources>

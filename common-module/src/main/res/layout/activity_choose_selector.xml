@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/main_layout"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/transparent_half_black"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutCancel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:orientation="vertical"></LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="@color/background_color_white"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_red"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+
+
+        <Button
+            android:id="@+id/buttonSure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color_white">
+
+        <LinearLayout
+            android:id="@+id/ll_wheelview"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <com.cicada.startup.common.ui.view.wheelview.WheelView
+                android:id="@+id/wheelview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@id/ll_wheelview"
+            android:layout_alignTop="@id/ll_wheelview"
+            android:background="@drawable/background_select_time"
+            android:orientation="horizontal"
+            android:visibility="gone"></LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
