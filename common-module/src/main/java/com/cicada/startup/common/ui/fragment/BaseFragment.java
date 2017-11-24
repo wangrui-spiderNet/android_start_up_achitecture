@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import com.cicada.startup.common.R;
 import com.cicada.startup.common.glide.GlideImageDisplayer;
 import com.cicada.startup.common.ui.activity.IBaseView;
-import com.cicada.startup.common.ui.view.LoadingDialog;
+import com.cicada.startup.common.ui.wight.LoadingDialog;
 import com.cicada.startup.common.utils.ToastUtils;
 import com.cicada.startup.common.utils.UiHelper;
 import com.tendcloud.tenddata.TCAgent;

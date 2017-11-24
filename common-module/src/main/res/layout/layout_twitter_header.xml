@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.cicada.startup.common.ui.view.swipetoloadlayout.RefreshHeaderView
+<com.cicada.startup.common.ui.wight.swipetoloadlayout.RefreshHeaderView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/refreshHeader"
     android:layout_width="match_parent"
@@ -56,4 +56,4 @@
                 android:textSize="@dimen/text_size_normal"/>
         </LinearLayout>
     </RelativeLayout>
-</com.cicada.startup.common.ui.view.swipetoloadlayout.RefreshHeaderView>
+</com.cicada.startup.common.ui.wight.swipetoloadlayout.RefreshHeaderView>

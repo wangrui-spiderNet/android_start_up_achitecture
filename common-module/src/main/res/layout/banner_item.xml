@@ -13,7 +13,7 @@
         android:background="@color/background_color"
         android:minHeight="140dp">
 
-        <com.cicada.startup.common.ui.view.NoScrollViewPager
+        <com.cicada.startup.common.ui.wight.NoScrollViewPager
             android:id="@+id/vp_banner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
@@ -36,7 +36,7 @@
                 android:lines="1"
                 android:textColor="@color/text_color_black"/>
 
-            <com.cicada.startup.common.ui.view.indicator.CirclePagerIndicator
+            <com.cicada.startup.common.ui.wight.indicator.CirclePagerIndicator
                 android:id="@+id/indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -14,7 +14,6 @@ import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,14 +25,12 @@ import com.cicada.startup.common.AppContext;
 import com.cicada.startup.common.R;
 import com.cicada.startup.common.cache.CacheManager;
 import com.cicada.startup.common.manager.AppManager;
-import com.cicada.startup.common.ui.view.LoadingDialog;
-import com.cicada.startup.common.utils.LogUtils;
+import com.cicada.startup.common.ui.wight.LoadingDialog;
 import com.cicada.startup.common.utils.StatusBarUtil;
 import com.cicada.startup.common.utils.ToastUtils;
 import com.cicada.startup.common.utils.UiHelper;
 import com.tendcloud.tenddata.TCAgent;
 
-import java.io.IOException;
 import java.io.Serializable;
 
 import butterknife.ButterKnife;

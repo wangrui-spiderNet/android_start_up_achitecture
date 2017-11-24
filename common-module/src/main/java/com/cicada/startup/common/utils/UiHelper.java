@@ -38,7 +38,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.cicada.startup.common.R;
-import com.cicada.startup.common.ui.view.CustomDialog;
+import com.cicada.startup.common.ui.wight.CustomDialog;
 
 import java.io.File;
 import java.util.List;

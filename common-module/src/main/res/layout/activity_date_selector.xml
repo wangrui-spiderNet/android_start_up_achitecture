@@ -55,7 +55,7 @@
             android:layout_height="180dp"
             android:orientation="horizontal">
 
-            <com.cicada.startup.common.ui.view.wheelview.WheelView
+            <com.cicada.startup.common.ui.wight.wheelview.WheelView
                 android:id="@+id/wheelviewYear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"/>
 
-            <com.cicada.startup.common.ui.view.wheelview.WheelView
+            <com.cicada.startup.common.ui.wight.wheelview.WheelView
                 android:id="@+id/wheelviewMonth"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"/>
 
-            <com.cicada.startup.common.ui.view.wheelview.WheelView
+            <com.cicada.startup.common.ui.wight.wheelview.WheelView
                 android:id="@+id/wheelviewDay"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"/>
 
-            <com.cicada.startup.common.ui.view.wheelview.WheelView
+            <com.cicada.startup.common.ui.wight.wheelview.WheelView
                 android:id="@+id/wheelviewHour"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"/>
 
-            <com.cicada.startup.common.ui.view.wheelview.WheelView
+            <com.cicada.startup.common.ui.wight.wheelview.WheelView
                 android:id="@+id/wheelviewMinute"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

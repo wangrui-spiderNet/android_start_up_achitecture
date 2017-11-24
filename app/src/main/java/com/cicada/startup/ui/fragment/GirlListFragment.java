@@ -79,6 +79,7 @@ public class GirlListFragment extends Fragment{
         GirlListViewModel.Factory factory = new GirlListViewModel
                 .Factory(MyApplication.getInstance(),
                 Injection.getDataRepository(MyApplication.getInstance()));
+
         mGirlListViewModel = ViewModelProviders.of(this, factory).get(GirlListViewModel.class);
         mGirlListViewModel.getGilrsLiveData().observe(this, new Observer<List<Girl>>() {
             @Override

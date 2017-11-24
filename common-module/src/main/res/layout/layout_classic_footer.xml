@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.cicada.startup.common.ui.view.swipetoloadlayout.LoadMoreFooterView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.cicada.startup.common.ui.wight.swipetoloadlayout.LoadMoreFooterView xmlns:android="http://schemas.android.com/apk/res/android"
    android:id="@+id/loadMoreFooter"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -47,4 +47,4 @@
                 android:textColor="#999999" />
         </LinearLayout>
     </RelativeLayout>
-</com.cicada.startup.common.ui.view.swipetoloadlayout.LoadMoreFooterView>
+</com.cicada.startup.common.ui.wight.swipetoloadlayout.LoadMoreFooterView>

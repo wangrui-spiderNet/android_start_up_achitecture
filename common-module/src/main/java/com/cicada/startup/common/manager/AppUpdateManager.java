@@ -5,8 +5,8 @@ import android.content.Context;
 
 import com.cicada.startup.common.domain.VersionUpdate;
 import com.cicada.startup.common.download.DownLoadAppBackService;
-import com.cicada.startup.common.ui.view.dialog.AdDialog;
-import com.cicada.startup.common.ui.view.dialog.DownLoadDialog;
+import com.cicada.startup.common.ui.wight.dialog.AdDialog;
+import com.cicada.startup.common.ui.wight.dialog.DownLoadDialog;
 
 public class AppUpdateManager {
     private Context context;
